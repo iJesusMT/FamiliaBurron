@@ -1,0 +1,8 @@
+body{
+    margin: spacingNone;
+}
+
+.nombre-completo {
+    color: blue;
+    font-weight: bold;
+}

@@ -1,0 +1,20 @@
+<template>
+    <template if:true={familiar}>
+        <lightning-card title={familiar.nombre} icon-name="standard:contact">
+            <div class="slds-var-m-around_medium">
+        <div class="container">
+            <!-- <div class="slds-text-heading_small">{familiar.nombre}</div> -->
+            <div class="nombre-completo">{familiar.nombreCompleto}</div>
+            <img class="personaje-img" src={familiar.imagenUrl}></img>
+        </div>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:false={familiar}>
+        <lightning-card title="Personaje" icon-name="standard:contact">
+            <div class="slds-var-m-around_medium">
+                <div>Seleccione un personaje</div>
+            </div>
+        </lightning-card>
+    </template>
+</template>
