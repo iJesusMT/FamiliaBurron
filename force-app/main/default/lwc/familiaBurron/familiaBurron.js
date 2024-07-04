@@ -8,8 +8,7 @@ export default class FamilaBurron extends LightningElement {
     personajeSeleccionadoId;
 
     onPersonajeSeleccionado(event){
-        this.personajeSelecciona
-        doId = event.detail;
+        this.personajeSeleccionadoId = event.detail;
     }
 
     userId = Id;
