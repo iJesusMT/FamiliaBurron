@@ -7,16 +7,16 @@ const columnas = [COLUMNA_NOMBRE];
 export default class FamilaBurron extends LightningElement {
     personajeSeleccionadoId;
 
-    onPersonajeSeleccionado(event){
+    localFunctionPersonajeSeleccionado(event){
         this.personajeSeleccionadoId = event.detail;
+        console.log('familiaBurron.js:localFunctionPersonajeSeleccionado:event.detail', event.detail);
     }
 
     userId = Id;
     @wire(getRecord, {recordId: '$userId', fields: columnas})
     user;
     get name(){
-        console.log('this.user.data', JSON.stringify(this.user.data));
-        console.log('Id:',Id);
+        console.log('familiaBurron.js:@wire(getRecord):user', JSON.stringify(this.user));
         return getFieldValue(this.user.data, COLUMNA_NOMBRE);
     }    
 }
